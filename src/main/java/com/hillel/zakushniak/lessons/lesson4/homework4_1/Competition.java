@@ -19,15 +19,32 @@ public class Competition {
         Participant[] participants = {
                 new Robot("Ilon", 55, 1),
                 new Human("Man", 111, 3),
+                null,
                 new Cat("Murchik", 99, 5)
         };
 
         for (Obstacle obstacle : obstacles) {
             for (Participant participant : participants) {
+
+                if (participant == null) continue;
+
+                checkIsAbleToOvercome(participant, obstacle);
+
+//                if (participant == null) continue;
+
                 obstacle.overcome(participant);
+
+
             }
+        }
+    }
+
+    private static void checkIsAbleToOvercome(Participant partcipant, Obstacle obstacle) {
+        if (partcipant.getMaxJumpingHieght() < Wall.height) {
+            System.out.println("Participant " + partcipant.getName() + " can`t overcome WALL with Height " + Wall.height
+                    + " passed only " + partcipant.getMaxJumpingHieght());
+            partcipant = null;
 
         }
-
     }
 }

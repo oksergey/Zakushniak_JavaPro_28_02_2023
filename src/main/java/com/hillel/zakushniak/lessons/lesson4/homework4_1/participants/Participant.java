@@ -12,6 +12,14 @@ public abstract class Participant {
         this.maxJumpingHieght = maxJumpingHieght;
     }
 
+    public int getMaxRunningDistance() {
+        return maxRunningDistance;
+    }
+
+    public int getMaxJumpingHieght() {
+        return maxJumpingHieght;
+    }
+
     public String getName() {
         return name;
     }
