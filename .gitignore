@@ -1,8 +1,14 @@
 # Compiled Java class files
 *.class
 
-### IntelliJ IDEA ###
+# Maven
+target/
+
+# JetBrains IDE
+.idea/
 out/
+
+### IntelliJ IDEA ###
 !**/src/main/**/out/
 !**/src/test/**/out/
 
@@ -35,6 +41,9 @@ bin/
 *.app
 *.exe
 *.war
+
+# Unit test reports
+TEST*.xml
 
 # Large media files
 *.mp4
