@@ -17,17 +17,16 @@ public class Competition {
         };
 
         Participant[] participants = {
-                new Robot("Ilon", 55, 1),
+                new Robot("Robot", 55, 1),
                 new Human("Man", 111, 3),
-                new Cat("Murchik", 99, 5)
+                new Cat("Cat", 99, 2)
         };
 
         for (Obstacle obstacle : obstacles) {
             for (Participant participant : participants) {
+
                 obstacle.overcome(participant);
             }
-
         }
-
     }
 }

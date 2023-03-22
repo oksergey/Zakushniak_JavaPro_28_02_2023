@@ -12,11 +12,11 @@ public class Human extends Participant {
 
     @Override
     public void jump() {
-        System.out.println("Participant human " + getName() + " jumped obstacle Wall with Height " + Wall.height);
+        System.out.println(getName() + " jumped obstacle Wall with Height " + Wall.height);
     }
 
     @Override
     public void run() {
-        System.out.println("Participant human " + getName() + " runned obstacle RunningTrack with Distance " + RunningTrack.length);
+        System.out.println(getName() + " runned obstacle RunningTrack with Distance " + RunningTrack.length);
     }
 }
