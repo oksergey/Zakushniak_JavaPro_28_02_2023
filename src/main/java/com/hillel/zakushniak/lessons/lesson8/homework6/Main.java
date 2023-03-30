@@ -46,47 +46,37 @@ public class Main {
         System.out.println(Arrays.toString(nums) + " target = " + target);
         System.out.println(Arrays.toString(twoSum(nums, target)));
 
-//        System.out.println(Arrays.toString(twoSum(new int[]{3, 2, 4}, 6)));
-//        twoSum(new int[]{3, 2, 4}, 6);
-//        twoSum(new int[]{3, 3}, 6);
-
-
     }
 
     public static int[] twoSum(int[] nums, int target) {
         int[] numsCloned = nums.clone();
 
         Arrays.sort(numsCloned);
-        int i = 0;
-        int j = numsCloned.length - 1;
+        int pointerToEnd = 0;
+        int pointerToBegin = numsCloned.length - 1;
 
-        for (; i != j; ) {
-            if ((numsCloned[i] + numsCloned[j]) == target) {
-//                System.out.println("solution: " + i + " " + j);
+        while (pointerToEnd != pointerToBegin) {
+            if ((numsCloned[pointerToEnd] + numsCloned[pointerToBegin]) == target) {
                 break;
             }
-            for (; j != i; ) {
-                if ((numsCloned[i] + numsCloned[j]) == target) {
-                    break;
-                }
-                if ((numsCloned[i] + numsCloned[j]) > target) {
-                    j--;
-                } else i++;
-            }
+            if ((numsCloned[pointerToEnd] + numsCloned[pointerToBegin]) > target) {
+                pointerToBegin--;
+            } else pointerToEnd++;
         }
-        for (int k = 0; k < nums.length; k++) {
-            if (nums[k] == numsCloned[i]) {
-                i = k;
+
+        for (int pointerOrigNums = 0; pointerOrigNums < nums.length; pointerOrigNums++) {
+            if (nums[pointerOrigNums] == numsCloned[pointerToEnd]) {
+                pointerToEnd = pointerOrigNums;
                 break;
             }
         }
-        for (int k = 0; k < nums.length; k++) {
-            if (nums[k] == numsCloned[j] && k != i) {
-                j = k;
+        for (int pointerOrigNums = 0; pointerOrigNums < nums.length; pointerOrigNums++) {
+            if (nums[pointerOrigNums] == numsCloned[pointerToBegin] && pointerOrigNums != pointerToEnd) {
+                pointerToBegin = pointerOrigNums;
                 break;
             }
         }
-        return new int[]{i, j};
+        return new int[]{pointerToEnd, pointerToBegin};
     }
 
     public static boolean isElementsDistinct(int[] nums) {
@@ -94,55 +84,28 @@ public class Main {
         for (int i = 0; i < nums.length; i++) {
             if (withoutDistincts.contains(nums[i])) {
                 return true;
-            } else {
-                withoutDistincts.add(nums[i]);
             }
+            withoutDistincts.add(nums[i]);
         }
         return false;
     }
 
-    //Time Limit Exceede
-//    public static boolean isElementsDistinct(int[] nums) {
-//        List<Integer> withoutDistincts = new ArrayList<>();
-//        for (int i = 0; i < nums.length; i++) {
-//            if (withoutDistincts.contains(nums[i])) {
-//                return true;
-//            } else {
-//                withoutDistincts.add(nums[i]);
-//            }
-//        }
-//        return false;
-//    }
-
-
-    //Time Limit Exceede
-//    public static boolean isElementsDistinct(int[] nums) {
-//        for (int i = 0; i < nums.length; i++) {
-//            int counter = 0;
-//            for (int j = 0; j < nums.length; j++) {
-//                if (nums[i] == nums[j]) counter++;
-//                if (counter > 1) return true;
-//            }
-//        }
-//        return false;
-//    }
-
     public static boolean isPalindrome(String str) {
 
         String inLowerCase = str.toLowerCase();
-        StringBuilder alphanumeric = new StringBuilder();
-        StringBuilder alphanumericReversed = new StringBuilder();
+        StringBuilder onlyLettersAndDigits = new StringBuilder();
+        StringBuilder reversedLettersAndDigits = new StringBuilder();
 
         for (int i = 0; i < inLowerCase.length(); i++) {
             char c = inLowerCase.charAt(i);
             if (Character.isDigit(c) || Character.isLetter(c)) {
-                alphanumeric.append(c);
+                onlyLettersAndDigits.append(c);
             }
         }
-        for (int i = alphanumeric.length() - 1; i >= 0; i--) {
-            alphanumericReversed.append(alphanumeric.charAt(i));
+        for (int i = onlyLettersAndDigits.length() - 1; i >= 0; i--) {
+            reversedLettersAndDigits.append(onlyLettersAndDigits.charAt(i));
         }
 
-        return alphanumeric.toString().equals(alphanumericReversed.toString());
+        return onlyLettersAndDigits.toString().equals(reversedLettersAndDigits.toString());
     }
 }
