@@ -48,27 +48,7 @@ public class Main {
 
     }
 
-    //Task 3. Second variant
     public static int[] twoSum(int[] nums, int target) {
-        Set<Integer> twoSum = new HashSet<>();
-        int ind1;
-        int ind2;
-
-        for (ind2 = 0; ind2 < nums.length; ind2++) {
-            if (twoSum.contains(target - nums[ind2])) {
-                break;
-            }
-            twoSum.add(nums[ind2]);
-        }
-
-        for (ind1 = 0; ind1 < nums.length; ind1++) {
-            if (nums[ind1] + nums[ind2] == target) break;
-        }
-
-        return new int[]{ind1, ind2};
-    }
-//Task 3. First variant
-    public static int[] twoSumFirst(int[] nums, int target) {
         int[] numsCloned = nums.clone();
 
         Arrays.sort(numsCloned);
