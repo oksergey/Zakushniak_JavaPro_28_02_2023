@@ -3,39 +3,21 @@ package main.java.com.hillel.zakushniak.lessons.lesson10.homeWork8;
 public class FileData {
 
     private String fileName;
-    private long fileSize;
+    private int fileSize;
     private String filePath;
 
-    public FileData(String fileName, long fileSize, String filePath) {
+    public FileData(String fileName, int fileSize, String filePath) {
         this.fileName = fileName;
         this.fileSize = fileSize;
         this.filePath = filePath;
     }
 
-    public String getFileName() {
-        return fileName;
-    }
-
-
-
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
-
-    public long getFileSize() {
+    public int getFileSize() {
         return fileSize;
-    }
-
-    public void setFileSize(long fileSize) {
-        this.fileSize = fileSize;
     }
 
     public String getFilePath() {
         return filePath;
-    }
-
-    public void setFilePath(String filePath) {
-        this.filePath = filePath;
     }
 
     @Override
