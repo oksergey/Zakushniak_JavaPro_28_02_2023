@@ -3,7 +3,7 @@ package main.java.com.hillel.zakushniak.lessons.lesson10.homeWork8;
 import java.util.*;
 
 public class FileNavigator {
-    private Map<String, ArrayList<FileData>> fileNavi;
+    private final Map<String, ArrayList<FileData>> fileNavi;
 
     public FileNavigator() {
         this.fileNavi = new HashMap<>();
@@ -11,26 +11,26 @@ public class FileNavigator {
 
     void add(FileData file) {
         if (fileNavi.isEmpty()) {
-            ArrayList<FileData> temp = new ArrayList<>();
-            temp.add(file);
-            fileNavi.put(file.getFilePath(), temp);
+            ArrayList<FileData> files = new ArrayList<>();
+            files.add(file);
+            fileNavi.put(file.getFilePath(), files);
         } else if (fileNavi.containsKey(file.getFilePath()) && !fileNavi.containsValue(file)) {
-            ArrayList<FileData> temp = fileNavi.get(file.getFilePath());
-            temp.add(file);
-            fileNavi.put(file.getFilePath(), temp);
+            ArrayList<FileData> files = fileNavi.get(file.getFilePath());
+            files.add(file);
+            fileNavi.put(file.getFilePath(), files);
         } else {
             System.out.println("Error! Wrong Path.");
         }
     }
 
-    void addDifferentPathes(FileData file) {
+    void addPathIfNotExist (FileData file) {
         if (!fileNavi.containsKey(file.getFilePath())) {
-            ArrayList<FileData> addingPass = new ArrayList<>();
-            fileNavi.put(file.getFilePath(), addingPass);
+            ArrayList<FileData> files = new ArrayList<>();
+            fileNavi.put(file.getFilePath(), files);
         }
-        ArrayList<FileData> temp = fileNavi.get(file.getFilePath());
-        temp.add(file);
-        fileNavi.put(file.getFilePath(), temp);
+        ArrayList<FileData> files = fileNavi.get(file.getFilePath());
+        files.add(file);
+        fileNavi.put(file.getFilePath(), files);
     }
 
     ArrayList find(String path) {
@@ -58,7 +58,7 @@ public class FileNavigator {
         for (Map.Entry<String, ArrayList<FileData>> entry : fileNavi.entrySet()) {
             sortedBySize = entry.getValue();
         }
-        Collections.sort(sortedBySize, new ComparatorBySize());
+        sortedBySize.sort(new ComparatorBySize());
         return sortedBySize;
     }
 
