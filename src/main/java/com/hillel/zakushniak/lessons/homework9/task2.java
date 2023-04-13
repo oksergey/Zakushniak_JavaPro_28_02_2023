@@ -1,7 +1,6 @@
 package main.java.com.hillel.zakushniak.lessons.homework9;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 2.1 Дан клас Product, який складається з властивостей:
@@ -30,13 +29,7 @@ public class task2 {
                 new Product("book", 349, true)
         );
 
-        List<Product> book = products.stream()
-                .filter(product -> product.getType().equals("book"))
-                .filter(product -> product.isDiscount())
-                .peek(product -> product.setPrice(product.getPrice() * (1 - discount)))
-                .collect(Collectors.toList());
-
-        System.out.println(book);
+        System.out.println(Product.getDiscount(products, "book", discount));
     }
 
 

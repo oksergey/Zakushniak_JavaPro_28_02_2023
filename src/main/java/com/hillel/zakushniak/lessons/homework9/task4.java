@@ -1,8 +1,6 @@
 package main.java.com.hillel.zakushniak.lessons.homework9;
 
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * 4.1 Даний клас Product, який складається з властивостей:
@@ -23,23 +21,18 @@ public class task4 {
 
 
         List<Product> products = List.of(
-                new Product("meat", 150, true, 2023, 1, 10),
-                new Product("milk", 35, true, 2023, 2, 11),
-                new Product("bread", 28, true, 2022, 3, 12),
-                new Product("tea", 135, false, 2022, 4, 13),
-                new Product("coffee", 499, false, 2022, 5, 14),
-                new Product("banana", 49, false, 2022, 6, 15),
-                new Product("book", 249, false, 2021, 7, 16),
-                new Product("book", 24, true, 2021, 8, 17),
-                new Product("book", 349, true, 2020, 9, 18)
+                new Product("meat", 150, true),
+                new Product("milk", 35, true),
+                new Product("bread", 28, true),
+                new Product("tea", 135, false),
+                new Product("coffee", 499, false),
+                new Product("banana", 49, false),
+                new Product("book", 249, false),
+                new Product("book", 24, true),
+                new Product("book", 349, true)
         );
 
-        List<Product> sortedProducts = products.stream()
-                .sorted(Comparator.comparing(product -> product.getDateAdded()))
-                .skip(products.size()-3)
-                .collect(Collectors.toList());
-
-        System.out.println(sortedProducts);
+        System.out.println(Product.findLastAdded(products, 3));
 
 
     }

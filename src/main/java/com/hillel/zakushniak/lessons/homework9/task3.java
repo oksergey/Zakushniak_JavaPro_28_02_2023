@@ -28,10 +28,10 @@ public class task3 {
                 new Product("book", 349, true)
         );
 
-        products.stream()
-                .filter(product -> product.getType().equals("book"))
-                .map(Product::getPrice)
-                .reduce(Math::min)
-                .ifPresentOrElse(System.out::println, () -> System.out.println("Product book not found!"));
+        try {
+            System.out.println(Product.findMinPrice(products, "book"));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
