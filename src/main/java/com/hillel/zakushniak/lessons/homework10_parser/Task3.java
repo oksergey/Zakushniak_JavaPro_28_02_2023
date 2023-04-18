@@ -18,7 +18,7 @@ public class Task3 {
 
             List<String> wordsUnique = bufferedReader.lines()
                     .map(String::toLowerCase)
-                    .flatMap(line -> Arrays.stream(line.split(" ")))
+                    .flatMap(line -> Arrays.stream(line.split("\\s+")))
                     .distinct()
                     .toList();
 

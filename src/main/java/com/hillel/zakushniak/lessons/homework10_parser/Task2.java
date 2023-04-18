@@ -17,7 +17,7 @@ public class Task2 {
 
             List<String> wordsAll = bufferedReader.lines()
                     .map(String::toLowerCase)
-                    .flatMap(line -> Arrays.stream(line.split(" ")))
+                    .flatMap(line -> Arrays.stream(line.split("\\s+")))
                     .filter(s -> s.length() > 2).toList();
 
 
