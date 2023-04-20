@@ -10,11 +10,11 @@ public class ArrayValueCalculator {
                 for (int j = 0; j < array[i].length; j++) {
                     try {
                         sum += Integer.parseInt(array[i][j]);
-                    } catch (NumberFormatException e) {
+                    } catch (NumberFormatException formatException) {
                         try {
                             throw new ArrayDataException("Cell [" + i + "][" + j + "] is ignored as don`t contain Int!");
-                        } catch (ArrayDataException ex) {
-                            System.err.println(ex);
+                        } catch (ArrayDataException exception) {
+                            System.err.println(exception);
                         }
                     }
                 }
