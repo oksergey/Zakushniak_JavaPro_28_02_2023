@@ -17,20 +17,22 @@ public class Main {
     public static void main(String[] args) {
 
         String[][] array = {
-                {"1", "2", "3", ""},
-                {"///", "6", "7", "8"},
+                {"1", "2", "3", "0"},
+                {"15", "6", "7", "8"},
                 {"-10", "11", "12"},
-                {"13", "14", "15", "16.0"}
+                {"13", "14", "15", "16"}
         };
 
-        int sum = 0;
+        int sum;
 
         try {
-           sum  = ArrayValueCalculator.doCalc(array);
+            sum = ArrayValueCalculator.doCalc(array);
+            System.out.println("Sum of all digits in this matrix equals: " + sum);
         } catch (ArraySizeException e) {
             System.err.println("Please, give an array with dimension 4x4!");
+        } catch (ArrayDataException exception) {
+            System.err.println(exception);
         }
 
-        System.out.println("Sum of all digits in this matrix equals: " + sum);
     }
 }
