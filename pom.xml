@@ -47,7 +47,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com/hillel/zakushniak/lessons/homework13/Task2_Reverse_Linked_List</mainClass>
+                            <mainClass>com.hillel.zakushniak.lessons.homework14_calc.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
