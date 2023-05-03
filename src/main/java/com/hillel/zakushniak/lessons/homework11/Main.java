@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.homework11;
+package com.hillel.zakushniak.lessons.homework11;
 
 /**
  * 1. Створити Клас ArrayValueCalculator
