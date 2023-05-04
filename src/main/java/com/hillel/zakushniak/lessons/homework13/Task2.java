@@ -1,6 +1,6 @@
-package main.java.com.hillel.zakushniak.lessons.homework13;
+package com.hillel.zakushniak.lessons.homework13;
 
-public class Task2_Reverse_Linked_List {
+public class Task2 {
 
     public static class ListNode {
         int val;
