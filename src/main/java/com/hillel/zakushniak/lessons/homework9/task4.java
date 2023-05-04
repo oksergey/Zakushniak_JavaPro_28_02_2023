@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.homework9;
+package com.hillel.zakushniak.lessons.homework9;
 
 import java.util.List;
 
