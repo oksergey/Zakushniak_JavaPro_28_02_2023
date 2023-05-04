@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson6.homework5.phonebook;
+package com.hillel.zakushniak.lessons.lesson6.homework5.phonebook;
 
 import java.util.ArrayList;
 import java.util.List;

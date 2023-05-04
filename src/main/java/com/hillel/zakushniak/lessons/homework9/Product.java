@@ -1,6 +1,5 @@
 package com.hillel.zakushniak.lessons.homework9;
 
-
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.List;
@@ -99,5 +98,42 @@ public class Product {
 
     public double getPrice() {
         return price;
+    }
+
+    public void setDiscount(boolean isDiscount) {
+        this.isDiscount = isDiscount;
+    }
+
+    public boolean equals(final Object o) {
+        if (o == this) return true;
+        if (!(o instanceof Product)) return false;
+        final Product other = (Product) o;
+        if (!other.canEqual((Object) this)) return false;
+        final Object this$type = this.getType();
+        final Object other$type = other.getType();
+        if (this$type == null ? other$type != null : !this$type.equals(other$type)) return false;
+        if (Double.compare(this.getPrice(), other.getPrice()) != 0) return false;
+        if (this.isDiscount() != other.isDiscount()) return false;
+        final Object this$dateAdded = this.getDateAdded();
+        final Object other$dateAdded = other.getDateAdded();
+        if (this$dateAdded == null ? other$dateAdded != null : !this$dateAdded.equals(other$dateAdded)) return false;
+        return true;
+    }
+
+    protected boolean canEqual(final Object other) {
+        return other instanceof Product;
+    }
+
+    public int hashCode() {
+        final int PRIME = 59;
+        int result = 1;
+        final Object $type = this.getType();
+        result = result * PRIME + ($type == null ? 43 : $type.hashCode());
+        final long $price = Double.doubleToLongBits(this.getPrice());
+        result = result * PRIME + (int) ($price >>> 32 ^ $price);
+        result = result * PRIME + (this.isDiscount() ? 79 : 97);
+        final Object $dateAdded = this.getDateAdded();
+        result = result * PRIME + ($dateAdded == null ? 43 : $dateAdded.hashCode());
+        return result;
     }
 }
