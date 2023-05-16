@@ -1,14 +1,12 @@
 package com.hillel.zakushniak.lessons.homework14_calc;
 
 public class Main {
-    public static void main(String[] args)
-
-    {
+    public static void main(String[] args) {
         if (args.length != 3) {
             System.out.println("Invalid arguments");
             return;
         }
-
+        Number val = 5;
         int num1 = Integer.parseInt(args[0]);
         String operation = args[1];
         int num2 = Integer.parseInt(args[2]);
