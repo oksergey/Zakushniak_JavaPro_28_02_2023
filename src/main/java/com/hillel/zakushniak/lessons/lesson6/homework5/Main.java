@@ -79,7 +79,7 @@ public class Main {
 
         for (Object uniqueAnimal : uniqueAnimals) {
 
-            classesInside.add(new main.java.com.hillel.zakushniak.lessons.lesson6.homework5.Animal((String)uniqueAnimal, countOccurance(animals, (String) uniqueAnimal)));
+            classesInside.add(new com.hillel.zakushniak.lessons.lesson6.homework5.Animal((String)uniqueAnimal, countOccurance(animals, (String) uniqueAnimal)));
 
         }
 
