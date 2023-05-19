@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson10.homeWork8;
+package com.hillel.zakushniak.lessons.lesson10.homeWork8;
 
 public class FileData {
 

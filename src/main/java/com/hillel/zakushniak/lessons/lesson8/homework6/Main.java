@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson8.homework6;
+package com.hillel.zakushniak.lessons.lesson8.homework6;
 
 import java.util.*;
 

@@ -1,7 +1,7 @@
-package main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.participants;
+package com.hillel.zakushniak.lessons.lesson4.homework4_1.participants;
 
-import main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.RunningTrack;
-import main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.Wall;
+import com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.RunningTrack;
+import com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.Wall;
 
 public class Cat extends Participant{
     public Cat(String name, int maxRunningDistance, int maxJumpingHieght) {

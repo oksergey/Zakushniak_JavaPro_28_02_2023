@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson3.homework3;
+package com.hillel.zakushniak.lessons.lesson3.homework3;
 
 import java.util.Arrays;
 

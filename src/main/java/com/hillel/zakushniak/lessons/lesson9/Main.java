@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson9;
+package com.hillel.zakushniak.lessons.lesson9;
 
 public class Main {
     public static void main(String[] args) {

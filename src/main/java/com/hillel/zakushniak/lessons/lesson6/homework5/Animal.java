@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson6.homework5;
+package com.hillel.zakushniak.lessons.lesson6.homework5;
 
 public class Animal {
 

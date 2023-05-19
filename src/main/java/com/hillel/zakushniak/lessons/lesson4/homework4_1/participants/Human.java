@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.participants;
+package com.hillel.zakushniak.lessons.lesson4.homework4_1.participants;
 
 import main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.RunningTrack;
 import main.java.com.hillel.zakushniak.lessons.lesson4.homework4_1.obstacles.Wall;

@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.lesson2.homework2;
+package com.hillel.zakushniak.lessons.lesson2.homework2;
 
 public class Employee {
     private String name;
