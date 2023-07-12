@@ -1,4 +1,4 @@
-package main.java.com.hillel.zakushniak.lessons.homework12_Roman_to_Integer;
+package com.hillel.zakushniak.lessons.homework12_Roman_to_Integer;
 
 public class Main {
     public static void main(String[] args) {
